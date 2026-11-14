@@ -93,8 +93,11 @@ input[type=color] { width: 30px; height: 26px; padding: 1px; border-radius: 6px;
 .dots { display: flex; gap: 4px; flex: 1; overflow-x: auto; }
 .dots button { white-space: nowrap; }
 .dots button.on { border-color: var(--accent); color: var(--accent); }
-.addstep { font-weight: 700; font-size: 14px; padding: 7px 14px; color: var(--accent); background: rgba(61,220,132,.1); border: 1.5px solid var(--accent); white-space: nowrap; }
-.addstep:hover:not(:disabled) { background: rgba(61,220,132,.2); border-color: var(--accent); }
+/* Botón "Agregar paso": píldora naranja, distinta del verde del resto */
+.addstep { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font-weight: 800; font-size: 14px; letter-spacing: .2px; color: #2a1600; padding: 6px 16px 6px 6px; border: 0; border-radius: 999px; background: linear-gradient(135deg, #ffc24b 0%, #ff8a1f 100%); box-shadow: 0 4px 14px rgba(255,138,31,.35), inset 0 1px 0 rgba(255,255,255,.45); transition: transform .12s, box-shadow .12s, filter .12s; }
+.addstep .plus { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: #2a1600; color: #ffc24b; font-size: 18px; font-weight: 800; line-height: 1; }
+.addstep:hover:not(:disabled) { background: linear-gradient(135deg, #ffcf6e 0%, #ff9a3c 100%); border: 0; transform: translateY(-1px); box-shadow: 0 7px 20px rgba(255,138,31,.45), inset 0 1px 0 rgba(255,255,255,.5); }
+.addstep:active { transform: translateY(0); filter: brightness(.95); }
 .note { margin-top: 8px; }
 
 .chip { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.5); }
