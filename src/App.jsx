@@ -580,7 +580,7 @@ export default function App() {
                   </button>
                 ))}
               </div>
-              <button onClick={addFrame} title="Copia este paso para mover desde acá">+ Paso</button>
+              <button className="addstep" onClick={addFrame} title="Copia este paso para mover desde acá">＋ Agregar paso</button>
               <button className="danger" onClick={removeFrame} disabled={frames.length <= 1}>Quitar paso</button>
             </div>
             <input className="note" placeholder="Nota del paso: qué tiene que hacer cada jugador…" value={frame.note || ''}
